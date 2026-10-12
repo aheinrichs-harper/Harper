@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-not-available skin-thumbsize-clientpref-standard" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Applied Programming/Lists and Tuples/Northwind Customers - Wikiversity</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-not-available skin-thumbsize-clientpref-standard";var cookie=document.cookie.match(/(?:^|; )enwikiversitymwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e0018853-746d-4c14-97d7-a471de98e2ee","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Applied_Programming/Lists_and_Tuples/Northwind_Customers","wgTitle":"Applied Programming/Lists and Tuples/Northwind Customers","wgCurRevisionId":2141562,"wgRevisionId":2141562,"wgArticleId":233525,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Applied Programming"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Applied_Programming/Lists_and_Tuples/Northwind_Customers","wgRelevantArticleId":233525,"wgTempUserName":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikiversity","wgConfirmEditCaptchaNeededForGenericEdit":"hcaptcha","wgConfirmEditForceShowCaptcha":false,"wgConfirmEditHCaptchaSiteKey":"5d0c670e-a5f4-4258-ad16-1f42792c9c62","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgMediaViewerMobileBeta":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":10000,"wgTestKitchenUserExperiments":{"overrides":[],"enrolled":[],"assigned":[],"subject_ids":[]},"wgEditSubmitButtonLabelPublish":true,"wgVisualEditorPageIsDisambiguation":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgULSLanguageSelectorV2Enabled":true,"wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"],"wgCheckUserClientHintsInEditRequest":true,"wgSiteNoticeId":"2.114"};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","ext.wikimediamessages.styles":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.dismissableSiteNotice.styles":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.pygments.view","site","mediawiki.page.ready","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.urlShortener.toolbar","ext.centralauth.centralautologin","ext.testKitchen","ext.wikimediaCustomizations.donorAccountCreation","mmv.bootstrap","ext.visualEditor.desktopArticleTarget.init","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","wikibase.databox.fromWikidata","ext.checkUser.clientHints","ext.dismissableSiteNotice"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.dismissableSiteNotice.styles%7Cext.pygments%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.47.0-wmf.23">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="Applied Programming/Lists and Tuples/Northwind Customers - Wikiversity">
+<meta property="og:type" content="website">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;action=edit">
+<link rel="icon" href="/static/favicon/wikiversity.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikiversity (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikiversity.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikiversity.org/wiki/Applied_Programming/Lists_and_Tuples/Northwind_Customers">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikiversity Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="auth.wikimedia.org">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Applied_Programming_Lists_and_Tuples_Northwind_Customers rootpage-Applied_Programming skin-vector-2022 action-view">
+<div id="mw-aria-live-region" class="mw-aria-live-region" aria-live="polite"></div><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header no-font-mode-scale">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  title="Main menu" >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"   >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin" aria-label="Move Main menu to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin" aria-label="Hide Main menu">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Main-Page" class="mw-list-item"><a href="/wiki/Wikiversity:Main_Page"><span>Main Page</span></a></li><li id="n-Browse" class="mw-list-item"><a href="/wiki/Wikiversity:Browse"><span>Browse</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-Guided-tours" class="mw-list-item"><a href="/wiki/Help:Guides"><span>Guided tours</span></a></li><li id="n-Random" class="mw-list-item"><a href="/wiki/Special:RandomRootpage"><span>Random</span></a></li><li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="The place to find out"><span>Help</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-community" class="vector-menu mw-portlet mw-portlet-community"  >
+	<div class="vector-menu-heading">
+		Community
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-portal" class="mw-list-item"><a href="/wiki/Wikiversity:Community_Portal" title="About the project, what you can do, where to find things"><span>Portal</span></a></li><li id="n-Colloquium" class="mw-list-item"><a href="/wiki/Wikiversity:Colloquium"><span>Colloquium</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Wikiversity:News" title="Find background information on current events"><span>News</span></a></li><li id="n-Projects" class="mw-list-item"><a href="/wiki/Wikiversity:Community_projects"><span>Projects</span></a></li><li id="n-Sandbox" class="mw-list-item"><a href="/wiki/Wikiversity:Sandbox"><span>Sandbox</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Wikiversity:Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikiversity.svg" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikiversity" src="/static/images/mobile/copyright/wikiversity-wordmark-en.svg" style="width: 9.125em; height: 1em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikiversity [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input mw-searchInput" autocomplete="off"
+							 type="search" name="search" placeholder="Search Wikiversity" aria-label="Search Wikiversity" autocapitalize="none" spellcheck="false" title="Search Wikiversity [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"   >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikiversity.org&amp;uselang=en" data-mw-donate-attempt="top_link" class=""><span>Donate</span></a>
+</li>
+<li id="pt-createaccount-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Applied+Programming%2FLists+and+Tuples%2FNorthwind+Customers" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Applied+Programming%2FLists+and+Tuples%2FNorthwind+Customers" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out vector-user-links-dropdown--collapsible"  title="More options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"   >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikiversity.org&amp;uselang=en" data-mw-donate-attempt="top_link" class=""><span class="vector-icon mw-ui-icon-heart mw-ui-icon-wikimedia-heart cdx-button__icon"></span>
+
+<span>Donate</span></a>
+</li>
+<li id="pt-createaccount" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Applied+Programming%2FLists+and+Tuples%2FNorthwind+Customers" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span>Create account</span></a>
+</li>
+<li id="pt-login" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Applied+Programming%2FLists+and+Tuples%2FNorthwind+Customers" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class=""><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn cdx-button__icon"></span>
+
+<span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><div id="mw-dismissablenotice-anonplace"></div><script>(function(){var node=document.getElementById("mw-dismissablenotice-anonplace");if(node){node.outerHTML="\u003Cdiv class=\"mw-dismissable-notice\"\u003E\u003Cdiv class=\"mw-dismissable-notice-close\"\u003E[\u003Ca tabindex=\"0\" role=\"button\"\u003Edismiss\u003C/a\u003E]\u003C/div\u003E\u003Cdiv class=\"mw-dismissable-notice-body\"\u003E\u003C!-- CentralNotice --\u003E\u003Cdiv id=\"localNotice\" data-nosnippet=\"\"\u003E\u003Cdiv class=\"anonnotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cdiv class=\"center\" style=\"\"\u003E\n\u003Cbig\u003E\u003Ca href=\"/wiki/Wikiversity:Why_create_an_account%3F\" class=\"mw-redirect\" title=\"Wikiversity:Why create an account?\"\u003EWhy create a Wikiversity account?\u003C/a\u003E\u003C/big\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E";}}());</script></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar no-font-mode-scale">
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span lang="en" dir="ltr"><span class="mw-page-title-main">Applied Programming/Lists and Tuples/Northwind Customers</span></span></h1>
+			
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector"  aria-label="Add languages" aria-description="This article is only available in this language. Add the article for other languages"  >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-0" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Add languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="uls-after-portlet-link"></span><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:NewItem?site=enwikiversity&amp;page=Applied+Programming%2FLists+and+Tuples%2FNorthwind+Customers" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-main" class="selected mw-list-item vector-tab-noicon"><a data-mw-interface  href="/wiki/Applied_Programming/Lists_and_Tuples/Northwind_Customers" title="View the content page [c]" accesskey="c" class=""><span>Resource</span></a>
+</li>
+<li id="ca-talk" class="new mw-list-item vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Talk:Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discuss</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"    >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+			    
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/wiki/Applied_Programming/Lists_and_Tuples/Northwind_Customers" class=""><span>Read</span></a>
+</li>
+<li id="ca-ve-edit" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;veaction=edit" title="Edit this page [v]" accesskey="v" class=""><span>Edit</span></a>
+</li>
+<li id="ca-edit" class="collapsible mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;action=edit" title="Edit the source code of this page [e]" accesskey="e" class=""><span>Edit source</span></a>
+</li>
+<li id="ca-history" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span>View history</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+			</nav>
+
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"   >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-verticalEllipsis mw-ui-icon-wikimedia-verticalEllipsis cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin" aria-label="Move Tools to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin" aria-label="Hide Tools">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view-more" class="selected mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/wiki/Applied_Programming/Lists_and_Tuples/Northwind_Customers" class=""><span class="vector-icon mw-ui-icon-eye mw-ui-icon-wikimedia-eye cdx-button__icon"></span>
+
+<span>Read</span></a>
+</li>
+<li id="ca-ve-edit-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;veaction=edit" title="Edit this page [v]" accesskey="v" class=""><span class="vector-icon mw-ui-icon-edit mw-ui-icon-wikimedia-edit cdx-button__icon"></span>
+
+<span>Edit</span></a>
+</li>
+<li id="ca-edit-more" class="collapsible mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;action=edit" title="Edit the source code of this page [e]" accesskey="e" class=""><span class="vector-icon mw-ui-icon-wikiText mw-ui-icon-wikimedia-wikiText cdx-button__icon"></span>
+
+<span>Edit source</span></a>
+</li>
+<li id="ca-history-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span class="vector-icon mw-ui-icon-history mw-ui-icon-wikimedia-history cdx-button__icon"></span>
+
+<span>View history</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Applied_Programming/Lists_and_Tuples/Northwind_Customers" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Applied_Programming/Lists_and_Tuples/Northwind_Customers" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;oldid=2141562" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Applied_Programming%2FLists_and_Tuples%2FNorthwind_Customers&amp;id=2141562&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikiversity.org%2Fwiki%2FApplied_Programming%2FLists_and_Tuples%2FNorthwind_Customers"><span>Get shortened URL</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikimedia_projects" class="vector-menu mw-portlet mw-portlet-wikimedia_projects"  >
+	<div class="vector-menu-heading">
+		Wikimedia Projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Commons" class="mw-list-item"><a href="https://commons.wikimedia.org/wiki/Main_Page"><span>Commons</span></a></li><li id="n-Wikibooks" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Project:Main_Page"><span>Wikibooks</span></a></li><li id="n-Wikidata" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page"><span>Wikidata</span></a></li><li id="n-Wikipedia" class="mw-list-item"><a href="https://en.wikipedia.org/wiki/Main_Page"><span>Wikipedia</span></a></li><li id="n-Wikiquote" class="mw-list-item"><a href="https://en.wikiquote.org/wiki/Main_Page"><span>Wikiquote</span></a></li><li id="n-Wikisource" class="mw-list-item"><a href="https://en.wikisource.org/wiki/Main_Page"><span>Wikisource</span></a></li><li id="n-Wikispecies" class="mw-list-item"><a href="https://species.wikimedia.org/wiki/Main_Page"><span>Wikispecies</span></a></li><li id="n-Wikivoyage" class="mw-list-item"><a href="https://en.wikivoyage.org/wiki/Main_Page"><span>Wikivoyage</span></a></li><li id="n-Wiktionary" class="mw-list-item"><a href="https://en.wiktionary.org/wiki/Project:Main_Page"><span>Wiktionary</span></a></li><li id="n-Meta-Wiki" class="mw-list-item"><a href="https://meta.wikimedia.org/wiki/Main_Page"><span>Meta-Wiki</span></a></li><li id="n-Outreach" class="mw-list-item"><a href="https://outreach.wikimedia.org/wiki/Main_Page"><span>Outreach</span></a></li><li id="n-MediaWiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/MediaWiki"><span>MediaWiki</span></a></li><li id="n-Wikimania" class="mw-list-item"><a href="https://meta.wikimedia.org/wiki/Wikimania"><span>Wikimania</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-create_a_book" class="mw-list-item"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Applied+Programming%2FLists+and+Tuples%2FNorthwind+Customers"><span>Create a book</span></a></li><li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Applied_Programming%2FLists_and_Tuples%2FNorthwind_Customers&amp;action=show-download-screen"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects emptyPortlet"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end no-font-mode-scale">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin" aria-label="Move Appearance to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin" aria-label="Hide Appearance">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikiversity</div>
+						<div id="contentSub"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="/wiki/Applied_Programming" title="Applied Programming">Applied Programming</a></bdi> | <bdi dir="ltr"><a href="/wiki/Applied_Programming/Lists_and_Tuples" title="Applied Programming/Lists and Tuples">Lists and Tuples</a></bdi></div></div></div>
+						
+					</div>
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>Northwind Customers table in <a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="extiw" title="wikipedia:Comma-separated values">comma-separated values</a> format.<sup id="cite&#95;ref-1" class="reference"><a href="#cite_note-1"><span class="cite-bracket">&#91;</span>1<span class="cite-bracket">&#93;</span></a></sup> The Northwind database is available under a Microsoft Public License.<sup id="cite&#95;ref-2" class="reference"><a href="#cite_note-2"><span class="cite-bracket">&#91;</span>2<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>"CustomerID","CompanyName","ContactName","ContactTitle","Address","City","Region","PostalCode","Country","Phone","Fax"
+"ALFKI","Alfreds Futterkiste","Maria Anders","Sales Representative","Obere Str. 57","Berlin","","12209","Germany","030-0074321","030-0076545"
+"ANATR","Ana Trujillo Emparedados y helados","Ana Trujillo","Owner","Avda. de la Constitución 2222","México D.F.","","05021","Mexico","(5) 555-4729","(5) 555-3745"
+"ANTON","Antonio Moreno Taquería","Antonio Moreno","Owner","Mataderos  2312","México D.F.","","05023","Mexico","(5) 555-3932",""
+"AROUT","Around the Horn","Thomas Hardy","Sales Representative","120 Hanover Sq.","London","","WA1 1DP","UK","(171) 555-7788","(171) 555-6750"
+"BERGS","Berglunds snabbköp","Christina Berglund","Order Administrator","Berguvsvägen  8","Luleå","","S-958 22","Sweden","0921-12 34 65","0921-12 34 67"
+"BLAUS","Blauer See Delikatessen","Hanna Moos","Sales Representative","Forsterstr. 57","Mannheim","","68306","Germany","0621-08460","0621-08924"
+"BLONP","Blondesddsl père et fils","Frédérique Citeaux","Marketing Manager","24, place Kléber","Strasbourg","","67000","France","88.60.15.31","88.60.15.32"
+"BOLID","Bólido Comidas preparadas","Martín Sommer","Owner","C/ Araquil, 67","Madrid","","28023","Spain","(91) 555 22 82","(91) 555 91 99"
+"BONAP","Bon app'","Laurence Lebihan","Owner","12, rue des Bouchers","Marseille","","13008","France","91.24.45.40","91.24.45.41"
+"BOTTM","Bottom-Dollar Markets","Elizabeth Lincoln","Accounting Manager","23 Tsawassen Blvd.","Tsawassen","BC","T2F 8M4","Canada","(604) 555-4729","(604) 555-3745"
+"BSBEV","B's Beverages","Victoria Ashworth","Sales Representative","Fauntleroy Circus","London","","EC2 5NT","UK","(171) 555-1212",""
+"CACTU","Cactus Comidas para llevar","Patricio Simpson","Sales Agent","Cerrito 333","Buenos Aires","","1010","Argentina","(1) 135-5555","(1) 135-4892"
+"CENTC","Centro comercial Moctezuma","Francisco Chang","Marketing Manager","Sierras de Granada 9993","México D.F.","","05022","Mexico","(5) 555-3392","(5) 555-7293"
+"CHOPS","Chop-suey Chinese","Yang Wang","Owner","Hauptstr. 29","Bern","","3012","Switzerland","0452-076545",""
+"COMMI","Comércio Mineiro","Pedro Afonso","Sales Associate","Av. dos Lusíadas, 23","Sao Paulo","SP","05432-043","Brazil","(11) 555-7647",""
+"CONSH","Consolidated Holdings","Elizabeth Brown","Sales Representative","Berkeley Gardens 12  Brewery","London","","WX1 6LT","UK","(171) 555-2282","(171) 555-9199"
+"DRACD","Drachenblut Delikatessen","Sven Ottlieb","Order Administrator","Walserweg 21","Aachen","","52066","Germany","0241-039123","0241-059428"
+"DUMON","Du monde entier","Janine Labrune","Owner","67, rue des Cinquante Otages","Nantes","","44000","France","40.67.88.88","40.67.89.89"
+"EASTC","Eastern Connection","Ann Devon","Sales Agent","35 King George","London","","WX3 6FW","UK","(171) 555-0297","(171) 555-3373"
+"ERNSH","Ernst Handel","Roland Mendel","Sales Manager","Kirchgasse 6","Graz","","8010","Austria","7675-3425","7675-3426"
+"FAMIA","Familia Arquibaldo","Aria Cruz","Marketing Assistant","Rua Orós, 92","Sao Paulo","SP","05442-030","Brazil","(11) 555-9857",""
+"FISSA","FISSA Fabrica Inter. Salchichas S.A.","Diego Roel","Accounting Manager","C/ Moralzarzal, 86","Madrid","","28034","Spain","(91) 555 94 44","(91) 555 55 93"
+"FOLIG","Folies gourmandes","Martine Rancé","Assistant Sales Agent","184, chaussée de Tournai","Lille","","59000","France","20.16.10.16","20.16.10.17"
+"FOLKO","Folk och fä HB","Maria Larsson","Owner","Åkergatan 24","Bräcke","","S-844 67","Sweden","0695-34 67 21",""
+"FRANK","Frankenversand","Peter Franken","Marketing Manager","Berliner Platz 43","München","","80805","Germany","089-0877310","089-0877451"
+"FRANR","France restauration","Carine Schmitt","Marketing Manager","54, rue Royale","Nantes","","44000","France","40.32.21.21","40.32.21.20"
+"FRANS","Franchi S.p.A.","Paolo Accorti","Sales Representative","Via Monte Bianco 34","Torino","","10100","Italy","011-4988260","011-4988261"
+"FURIB","Furia Bacalhau e Frutos do Mar","Lino Rodriguez","Sales Manager","Jardim das rosas n. 32","Lisboa","","1675","Portugal","(1) 354-2534","(1) 354-2535"
+"GALED","Galería del gastrónomo","Eduardo Saavedra","Marketing Manager","Rambla de Cataluña, 23","Barcelona","","08022","Spain","(93) 203 4560","(93) 203 4561"
+"GODOS","Godos Cocina Típica","José Pedro Freyre","Sales Manager","C/ Romero, 33","Sevilla","","41101","Spain","(95) 555 82 82",""
+"GOURL","Gourmet Lanchonetes","André Fonseca","Sales Associate","Av. Brasil, 442","Campinas","SP","04876-786","Brazil","(11) 555-9482",""
+"GREAL","Great Lakes Food Market","Howard Snyder","Marketing Manager","2732 Baker Blvd.","Eugene","OR","97403","USA","(503) 555-7555",""
+"GROSR","GROSELLA-Restaurante","Manuel Pereira","Owner","5ª Ave. Los Palos Grandes","Caracas","DF","1081","Venezuela","(2) 283-2951","(2) 283-3397"
+"HANAR","Hanari Carnes","Mario Pontes","Accounting Manager","Rua do Paço, 67","Rio de Janeiro","RJ","05454-876","Brazil","(21) 555-0091","(21) 555-8765"
+"HILAA","HILARION-Abastos","Carlos Hernández","Sales Representative","Carrera 22 con Ave. Carlos Soublette #8-35","San Cristóbal","Táchira","5022","Venezuela","(5) 555-1340","(5) 555-1948"
+"HUNGC","Hungry Coyote Import Store","Yoshi Latimer","Sales Representative","City Center Plaza 516 Main St.","Elgin","OR","97827","USA","(503) 555-6874","(503) 555-2376"
+"HUNGO","Hungry Owl All-Night Grocers","Patricia McKenna","Sales Associate","8 Johnstown Road","Cork","Co. Cork","","Ireland","2967 542","2967 3333"
+"ISLAT","Island Trading","Helen Bennett","Marketing Manager","Garden House Crowther Way","Cowes","Isle of Wight","PO31 7PJ","UK","(198) 555-8888",""
+"KOENE","Königlich Essen","Philip Cramer","Sales Associate","Maubelstr. 90","Brandenburg","","14776","Germany","0555-09876",""
+"LACOR","La corne d'abondance","Daniel Tonini","Sales Representative","67, avenue de l'Europe","Versailles","","78000","France","30.59.84.10","30.59.85.11"
+"LAMAI","La maison d'Asie","Annette Roulet","Sales Manager","1 rue Alsace-Lorraine","Toulouse","","31000","France","61.77.61.10","61.77.61.11"
+"LAUGB","Laughing Bacchus Wine Cellars","Yoshi Tannamuri","Marketing Assistant","1900 Oak St.","Vancouver","BC","V3F 2K1","Canada","(604) 555-3392","(604) 555-7293"
+"LAZYK","Lazy K Kountry Store","John Steel","Marketing Manager","12 Orchestra Terrace","Walla Walla","WA","99362","USA","(509) 555-7969","(509) 555-6221"
+"LEHMS","Lehmanns Marktstand","Renate Messner","Sales Representative","Magazinweg 7","Frankfurt a.M.","","60528","Germany","069-0245984","069-0245874"
+"LETSS","Let's Stop N Shop","Jaime Yorres","Owner","87 Polk St. Suite 5","San Francisco","CA","94117","USA","(415) 555-5938",""
+"LILAS","LILA-Supermercado","Carlos González","Accounting Manager","Carrera 52 con Ave. Bolívar #65-98 Llano Largo","Barquisimeto","Lara","3508","Venezuela","(9) 331-6954","(9) 331-7256"
+"LINOD","LINO-Delicateses","Felipe Izquierdo","Owner","Ave. 5 de Mayo Porlamar","I. de Margarita","Nueva Esparta","4980","Venezuela","(8) 34-56-12","(8) 34-93-93"
+"LONEP","Lonesome Pine Restaurant","Fran Wilson","Sales Manager","89 Chiaroscuro Rd.","Portland","OR","97219","USA","(503) 555-9573","(503) 555-9646"
+"MAGAA","Magazzini Alimentari Riuniti","Giovanni Rovelli","Marketing Manager","Via Ludovico il Moro 22","Bergamo","","24100","Italy","035-640230","035-640231"
+"MAISD","Maison Dewey","Catherine Dewey","Sales Agent","Rue Joseph-Bens 532","Bruxelles","","B-1180","Belgium","(02) 201 24 67","(02) 201 24 68"
+"MEREP","Mère Paillarde","Jean Fresnière","Marketing Assistant","43 rue St. Laurent","Montréal","Québec","H1J 1C3","Canada","(514) 555-8054","(514) 555-8055"
+"MORGK","Morgenstern Gesundkost","Alexander Feuer","Marketing Assistant","Heerstr. 22","Leipzig","","04179","Germany","0342-023176",""
+"NORTS","North/South","Simon Crowther","Sales Associate","South House 300 Queensbridge","London","","SW7 1RZ","UK","(171) 555-7733","(171) 555-2530"
+"OCEAN","Océano Atlántico Ltda.","Yvonne Moncada","Sales Agent","Ing. Gustavo Moncada 8585 Piso 20-A","Buenos Aires","","1010","Argentina","(1) 135-5333","(1) 135-5535"
+"OLDWO","Old World Delicatessen","Rene Phillips","Sales Representative","2743 Bering St.","Anchorage","AK","99508","USA","(907) 555-7584","(907) 555-2880"
+"OTTIK","Ottilies Käseladen","Henriette Pfalzheim","Owner","Mehrheimerstr. 369","Köln","","50739","Germany","0221-0644327","0221-0765721"
+"PARIS","Paris spécialités","Marie Bertrand","Owner","265, boulevard Charonne","Paris","","75012","France","(1) 42.34.22.66","(1) 42.34.22.77"
+"PERIC","Pericles Comidas clásicas","Guillermo Fernández","Sales Representative","Calle Dr. Jorge Cash 321","México D.F.","","05033","Mexico","(5) 552-3745","(5) 545-3745"
+"PICCO","Piccolo und mehr","Georg Pipps","Sales Manager","Geislweg 14","Salzburg","","5020","Austria","6562-9722","6562-9723"
+"PRINI","Princesa Isabel Vinhos","Isabel de Castro","Sales Representative","Estrada da saúde n. 58","Lisboa","","1756","Portugal","(1) 356-5634",""
+"QUEDE","Que Delícia","Bernardo Batista","Accounting Manager","Rua da Panificadora, 12","Rio de Janeiro","RJ","02389-673","Brazil","(21) 555-4252","(21) 555-4545"
+"QUEEN","Queen Cozinha","Lúcia Carvalho","Marketing Assistant","Alameda dos Canàrios, 891","Sao Paulo","SP","05487-020","Brazil","(11) 555-1189",""
+"QUICK","QUICK-Stop","Horst Kloss","Accounting Manager","Taucherstraße 10","Cunewalde","","01307","Germany","0372-035188",""
+"RANCH","Rancho grande","Sergio Gutiérrez","Sales Representative","Av. del Libertador 900","Buenos Aires","","1010","Argentina","(1) 123-5555","(1) 123-5556"
+"RATTC","Rattlesnake Canyon Grocery","Paula Wilson","Assistant Sales Representative","2817 Milton Dr.","Albuquerque","NM","87110","USA","(505) 555-5939","(505) 555-3620"
+"REGGC","Reggiani Caseifici","Maurizio Moroni","Sales Associate","Strada Provinciale 124","Reggio Emilia","","42100","Italy","0522-556721","0522-556722"
+"RICAR","Ricardo Adocicados","Janete Limeira","Assistant Sales Agent","Av. Copacabana, 267","Rio de Janeiro","RJ","02389-890","Brazil","(21) 555-3412",""
+"RICSU","Richter Supermarkt","Michael Holz","Sales Manager","Grenzacherweg 237","Genève","","1203","Switzerland","0897-034214",""
+"ROMEY","Romero y tomillo","Alejandra Camino","Accounting Manager","Gran Vía, 1","Madrid","","28001","Spain","(91) 745 6200","(91) 745 6210"
+"SANTG","Santé Gourmet","Jonas Bergulfsen","Owner","Erling Skakkes gate 78","Stavern","","4110","Norway","07-98 92 35","07-98 92 47"
+"SAVEA","Save-a-lot Markets","Jose Pavarotti","Sales Representative","187 Suffolk Ln.","Boise","ID","83720","USA","(208) 555-8097",""
+"SEVES","Seven Seas Imports","Hari Kumar","Sales Manager","90 Wadhurst Rd.","London","","OX15 4NB","UK","(171) 555-1717","(171) 555-5646"
+"SIMOB","Simons bistro","Jytte Petersen","Owner","Vinbæltet 34","Kobenhavn","","1734","Denmark","31 12 34 56","31 13 35 57"
+"SPECD","Spécialités du monde","Dominique Perrier","Marketing Manager","25, rue Lauriston","Paris","","75016","France","(1) 47.55.60.10","(1) 47.55.60.20"
+"SPLIR","Split Rail Beer &amp; Ale","Art Braunschweiger","Sales Manager","P.O. Box 555","Lander","WY","82520","USA","(307) 555-4680","(307) 555-6525"
+"SUPRD","Suprêmes délices","Pascale Cartrain","Accounting Manager","Boulevard Tirou, 255","Charleroi","","B-6000","Belgium","(071) 23 67 22 20","(071) 23 67 22 21"
+"THEBI","The Big Cheese","Liz Nixon","Marketing Manager","89 Jefferson Way Suite 2","Portland","OR","97201","USA","(503) 555-3612",""
+"THECR","The Cracker Box","Liu Wong","Marketing Assistant","55 Grizzly Peak Rd.","Butte","MT","59801","USA","(406) 555-5834","(406) 555-8083"
+"TOMSP","Toms Spezialitäten","Karin Josephs","Marketing Manager","Luisenstr. 48","Münster","","44087","Germany","0251-031259","0251-035695"
+"TORTU","Tortuga Restaurante","Miguel Angel Paolino","Owner","Avda. Azteca 123","México D.F.","","05033","Mexico","(5) 555-2933",""
+"TRADH","Tradição Hipermercados","Anabela Domingues","Sales Representative","Av. Inês de Castro, 414","Sao Paulo","SP","05634-030","Brazil","(11) 555-2167","(11) 555-2168"
+"TRAIH","Trail's Head Gourmet Provisioners","Helvetius Nagy","Sales Associate","722 DaVinci Blvd.","Kirkland","WA","98034","USA","(206) 555-8257","(206) 555-2174"
+"VAFFE","Vaffeljernet","Palle Ibsen","Sales Manager","Smagsloget 45","Århus","","8200","Denmark","86 21 32 43","86 22 33 44"
+"VICTE","Victuailles en stock","Mary Saveley","Sales Agent","2, rue du Commerce","Lyon","","69004","France","78.32.54.86","78.32.54.87"
+"VINET","Vins et alcools Chevalier","Paul Henriot","Accounting Manager","59 rue de l'Abbaye","Reims","","51100","France","26.47.15.10","26.47.15.11"
+"WANDK","Die Wandernde Kuh","Rita Müller","Sales Representative","Adenauerallee 900","Stuttgart","","70563","Germany","0711-020361","0711-035428"
+"WARTH","Wartian Herkku","Pirkko Koskitalo","Accounting Manager","Torikatu 38","Oulu","","90110","Finland","981-443655","981-443655"
+"WELLI","Wellington Importadora","Paula Parente","Sales Manager","Rua do Mercado, 12","Resende","SP","08737-363","Brazil","(14) 555-8122",""
+"WHITC","White Clover Markets","Karl Jablonski","Owner","305 - 14th Ave. S. Suite 3B","Seattle","WA","98128","USA","(206) 555-4112","(206) 555-4115"
+"WILMK","Wilman Kala","Matti Karttunen","Owner/Marketing Assistant","Keskuskatu 45","Helsinki","","21240","Finland","90-224 8858","90-224 8858"
+"WOLZA","Wolski Zajazd","Zbyszek Piestrzeniewicz","Owner","ul. Filtrowa 68","Warszawa","","01-012","Poland","(26) 642-7012","(26) 642-7012"
+</pre></div>
+<ol class="references">
+<li id="cite&#95;note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://nucleonsoftware.com/downloads">Nucleon Software: Downloads</a></span>
+</li>
+<li id="cite&#95;note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://northwinddatabase.codeplex.com/license">CodePlex: Northwind License</a></span>
+</li>
+</ol>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.eqiad.main‐55798dc59f‐g59s2
+Cached time: 20260912071537
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.007 seconds
+Real time usage: 0.058 seconds
+Preprocessor visited node count: 13/1000000
+Revision size: 13944/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13999/5000000 bytes
+Number of Wikibase entities loaded: 0/500
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Render ID c08df3f4-ae79-11f1-920b-651abd74f538 -->
+
+<!-- Saved in parser cache with key enwikiversity:pcache:233525:|#|:idhash:canonical and timestamp 20260912071537 and revision id 2141562. Rendering was triggered because: page_view_oldid
+ -->
+</div><noscript><img src="https://en.wikiversity.org/wiki/Special:CentralAutoLogin/start?useformat=desktop&amp;type=1x1&amp;usesul3=1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikiversity.org/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;oldid=2141562">https://en.wikiversity.org/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;oldid=2141562</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw-interface=""><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Applied_Programming" title="Category:Applied Programming">Applied Programming</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			<footer id="footer" class="mw-footer" >
+				<ul id="footer-info" class="mw-portlet mw-portlet-footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 19 April 2020, at 15:13.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="nofollow" class="external text" href="//creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License</a>; additional terms may apply.  By using this site, you agree to the <a class="external text" data-mw-original-href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use" href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use">Terms of Use</a> and <a class="external text" data-mw-original-href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy" href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy Policy.</a></li>
+</ul>
+
+				<ul id="footer-places" class="mw-portlet mw-portlet-footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikiversity:About">About Wikiversity</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikiversity:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-legal-safety-contacts"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information">Legal &amp; safety contacts</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikiversity.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.wikiversity.org/w/index.php?title=Applied_Programming/Lists_and_Tuples/Northwind_Customers&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+				<ul id="footer-icons" class="mw-portlet mw-portlet-footer-icons noprint">
+	<li id="footer-copyrightico"><a href="https://www.wikimedia.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/static/images/footer/wikimedia-button.svg" width="84" height="29"><img src="/static/images/footer/wikimedia.svg" width="25" height="25" alt="Wikimedia Foundation" lang="en" loading="lazy"></picture></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/w/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="/w/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+			</footer>
+		</div>
+	</div> 
+</div> 
+<div class="vector-header-container vector-sticky-header-container no-font-mode-scale">
+	<div id="vector-sticky-header" class="vector-sticky-header">
+		<div class="vector-sticky-header-start">
+			<div class="vector-sticky-header-icon-start vector-button-flush-left" aria-hidden="true">
+				<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-sticky-header-search-toggle" tabindex="-1" data-event-name="ui.vector-sticky-search-form.icon"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Search</span>
+			</button>
+		</div>
+			
+		<div role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box">
+			<div class="vector-typeahead-search-container">
+				<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail">
+					<form action="/w/index.php" id="vector-sticky-search-form" class="cdx-search-input cdx-search-input--has-end-button">
+						<div  class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+							<div class="cdx-text-input cdx-text-input--has-start-icon">
+								<input
+									class="cdx-text-input__input mw-searchInput" autocomplete="off"
+									
+									type="search" name="search" placeholder="Search Wikiversity">
+								<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+							</div>
+							<input type="hidden" name="title" value="Special:Search">
+						</div>
+						<button class="cdx-button cdx-search-input__end-button">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-context-bar">
+				<div class="vector-sticky-header-context-bar-primary" aria-hidden="true" ><span lang="en" dir="ltr"><span class="mw-page-title-main">Applied Programming/Lists and Tuples/Northwind Customers</span></span></div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-end" aria-hidden="true">
+			<div class="vector-sticky-header-icons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-talk-sticky-header" tabindex="-1" data-event-name="talk-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbles mw-ui-icon-wikimedia-speechBubbles cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-subject-sticky-header" tabindex="-1" data-event-name="subject-sticky-header"><span class="vector-icon mw-ui-icon-article mw-ui-icon-wikimedia-article cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-history-sticky-header" tabindex="-1" data-event-name="history-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-history mw-ui-icon-wikimedia-wikimedia-history cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-watchlink" id="ca-watchstar-sticky-header" tabindex="-1" data-event-name="watch-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-star mw-ui-icon-wikimedia-wikimedia-star cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-ve-edit-sticky-header" tabindex="-1" data-event-name="ve-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-edit mw-ui-icon-wikimedia-wikimedia-edit cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-edit-sticky-header" tabindex="-1" data-event-name="wikitext-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-wikiText mw-ui-icon-wikimedia-wikimedia-wikiText cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-viewsource-sticky-header" tabindex="-1" data-event-name="ve-edit-protected-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-editLock mw-ui-icon-wikimedia-wikimedia-editLock cdx-button__icon"></span>
+
+<span></span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-buttons">
+				<button class="cdx-button cdx-button--weight-quiet mw-interlanguage-selector" id="p-lang-btn-sticky-header" tabindex="-1" data-event-name="ui.dropdown-p-lang-btn-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-language mw-ui-icon-wikimedia-wikimedia-language cdx-button__icon"></span>
+
+<span>Add languages</span>
+			</button>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive" id="ca-addsection-sticky-header" tabindex="-1" data-event-name="addsection-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbleAdd-progressive mw-ui-icon-wikimedia-speechBubbleAdd-progressive cdx-button__icon"></span>
+
+<span>Add topic</span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-icon-end">
+				<div class="vector-user-links">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-67cd9b6db5-58htn","wgBackendResponseTime":72,"wgPageParseReport":{"limitreport":{"cputime":"0.007","walltime":"0.058","ppvisitednodes":{"value":13,"limit":1000000},"revisionsize":{"value":13944,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13999,"limit":5000000},"entityaccesscount":{"value":0,"limit":500},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw-web.eqiad.main-55798dc59f-g59s2","timestamp":"20260912071537","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+</html>
